@@ -4,13 +4,14 @@
   --accent-color: #2196f3;
   --primary-wight-color: #ffffff;
   --primary-black-color: #000000;
-  --primary-bgc: #F5F4FA;
-  --primary-icon-color: #AFB1B8;
+  --primary-bgc: #f5f4fa;
+  --primary-icon-color: #afb1b8;
+  --primary-icon-bgcolor: #2f303a;
 }
 
 body {
-  font-family: 'Raleway', sans-serif;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Raleway", sans-serif;
+  font-family: "Roboto", sans-serif;
   background-color: var(--primary-wight-color);
   color: var(--primary-text-color);
 }
@@ -59,14 +60,15 @@ a {
 /* <<<<<<<<<<<<  HEADER  >>>>>>>>>>>> */
 .header-box {
   display: flex;
-  align-items: center;
+  /* align-items: center; */
+  align-items: baseline;
   justify-content: space-between;
 }
 
 .first-word {
-font-size: 26px;
-line-height: 1.192;
-color: var(--accent-color);
+  font-size: 26px;
+  line-height: 1.192;
+  color: var(--accent-color);
 }
 
 .header-flex {
@@ -74,14 +76,14 @@ color: var(--accent-color);
 }
 
 .header-flex > a {
-margin-right: 93px;
-font-family: Raleway;
-font-style: normal;
-font-weight: bold;
-font-size: 26px;
-line-height: 1.192;
-letter-spacing: 0.03em;
-color: var(--primary-black-color)
+  margin-right: 93px;
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 1.192;
+  letter-spacing: 0.03em;
+  color: var(--primary-black-color);
 }
 
 .nav-list a {
@@ -159,16 +161,18 @@ color: var(--primary-black-color)
 
 /* <<<<<<<<<<<< HERO  >>>>>>>>>>>> */
 .hero-section {
-  background-color: #2f303a;
+  background-color: var(--primary-icon-bgcolor);
   text-align: center;
   padding: 200px 0;
-  
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4),rgba(47, 48, 58, 0.4)),
-   url(../img/hero/hero_original-min.jpg);
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../img/hero/hero_original-min.jpg);
   background-repeat: no-repeat;
   background-position: center;
 }
-
 
 .hero-title {
   font-weight: 900;
@@ -220,7 +224,6 @@ color: var(--primary-black-color)
   margin-left: 30px;
 }
 
-
 .priority-list li::before {
   display: block;
   content: "";
@@ -234,8 +237,8 @@ color: var(--primary-black-color)
   background-position: 50% 50%;
 }
 
-.antena-item::before {
-  background-image: url(../img/icons/svg/astronaut.svg);
+.antenna-item::before {
+  background-image: url(../img/icons/svg/antenna.svg);
 }
 
 .clock-item::before {
@@ -298,6 +301,7 @@ color: var(--primary-black-color)
 .team-box {
   padding: 94px 0;
 }
+
 .team-title {
   font-weight: bold;
   font-size: 36px;
@@ -314,7 +318,7 @@ color: var(--primary-black-color)
 
 .team-list > li {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-  0px 2px 1px rgba(0, 0, 0, 0.2);
+    0px 2px 1px rgba(0, 0, 0, 0.2);
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
 }
@@ -355,7 +359,6 @@ color: var(--primary-black-color)
   margin: 0;
   width: 44px;
   height: 44px;
-  /* border-radius: 50%; */
   margin-top: 16px;
 }
 
@@ -378,21 +381,21 @@ color: var(--primary-black-color)
   background-color: var(--accent-color);
   fill: var(--primary-wight-color);
 }
-
 /* <<<<<<<<<<<<  end OUR TEAM  >>>>>>>>>>>> */
 
+/* <<<<<<<<<<<<  CLIENTS  >>>>>>>>>>>> */
 .client-box {
   padding: 94px 0;
 }
 
 .client-title {
-font-weight: bold;
-font-size: 36px;
-line-height: 1.166;
-text-align: center;
-letter-spacing: 0.03em;
-color: var(--primary-text-color);
-margin-bottom: 50px;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 1.166;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--primary-text-color);
+  margin-bottom: 50px;
 }
 
 .client-list {
@@ -410,12 +413,14 @@ margin-bottom: 50px;
   display: flex;
   width: 100%;
   height: 100%;
-  border: 1px solid #AFB1B8;
+  border: 1px solid #afb1b8;
   border-radius: 4px;
   justify-content: center;
   align-items: center;
-  fill: currentColor;
-  
+}
+
+.client-icon {
+  fill: var(--primary-icon-color);
 }
 
 .client-link:focus,
@@ -423,16 +428,11 @@ margin-bottom: 50px;
   border: solid var(--accent-color);
 }
 
-.client-link svg {
-  fill: var(--primary-icon-color);
-}
-
-.client-link svg:hover,
-.client-link svg:focus {
+.client-icon:hover,
+.client-icon:focus {
   fill: var(--accent-color);
 }
-
-
+/* <<<<<<<<<<<<  end CLIENTS  >>>>>>>>>>>> */
 
 /* <<<<<<<<<<<<  FOOTER  >>>>>>>>>>>> */
 .footer-box {
@@ -441,23 +441,23 @@ margin-bottom: 50px;
 }
 
 .footer-logo {
-font-family: Raleway;
-font-style: normal;
-font-weight: bold;
-font-size: 26px;
-line-height: 1.192;
-letter-spacing: 0.03em;
-color: var(--primary-wight-color);
-margin-bottom: 20px;
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 1.192;
+  letter-spacing: 0.03em;
+  color: var(--primary-wight-color);
+  margin-bottom: 20px;
 }
 
 .footer-section {
-  background-color: #2f303a;
+  background-color: var(--primary-icon-bgcolor);
   padding: 60px 0;
 }
 
 .footer-link-map {
-  display: block
+  display: block;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -512,7 +512,7 @@ margin-bottom: 20px;
   align-items: center;
   border-radius: 50%;
   fill: var(--primary-wight-color);
-  background-color: rgba(255, 255, 255, 0.1);;
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .footer-socium a:hover,
@@ -520,7 +520,6 @@ margin-bottom: 20px;
   background-color: var(--accent-color);
   fill: var(--primary-wight-color);
 }
-
 /* <<<<<<<<<<<<  end FOOTER  >>>>>>>>>>>> */
 /* <<<<<<<<<<<<<<<<<<<<<<<< end STUDIO  >>>>>>>>>>>>>>>>>>>>>>>> */
 
@@ -557,7 +556,8 @@ margin-bottom: 20px;
 .btm-link:hover {
   background: var(--accent-color);
   color: var(--primary-wight-color);
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .work-subtitle {
@@ -583,14 +583,15 @@ margin-bottom: 20px;
 
 .portfolio-list a:hover,
 .portfolio-list a:focus {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .portfolio-card {
   border: 1px solid #eeeeee;
 }
 
-.portfolio-list li:not(:nth-child(3n+3)) {
+.portfolio-list li:not(:nth-child(3n + 3)) {
   margin-right: 30px;
 }
 
