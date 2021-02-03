@@ -234,15 +234,14 @@ a {
   background-repeat: no-repeat;
   background-position: center;
   background-size: 70px;
-  background-position: 50% 50%;
 }
 
 .antenna-item::before {
-  background-image: url(../img/icons/svg/antenna.svg);
+  background-image: url(../img/icons/SVG/antenna.svg);
 }
 
 .clock-item::before {
-  background-image: url(../img/icons/svg/clock.svg);
+  background-image: url(../img/icons/SVG/clock.svg);
 }
 
 .diagram-item::before {
@@ -428,10 +427,20 @@ a {
   border: solid var(--accent-color);
 }
 
-.client-icon:hover,
-.client-icon:focus {
+.client-link > svg:focus,
+.client-link > svg:hover {
   fill: var(--accent-color);
 }
+/* 
+.client-link svg:focus,
+.client-link svg:hover {
+  fill: var(--accent-color);
+} */
+
+/* .client-icon:hover,
+.client-icon:focus {
+  fill: var(--accent-color);
+} */
 /* <<<<<<<<<<<<  end CLIENTS  >>>>>>>>>>>> */
 
 /* <<<<<<<<<<<<  FOOTER  >>>>>>>>>>>> */
