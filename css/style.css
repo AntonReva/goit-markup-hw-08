@@ -427,20 +427,10 @@ a {
   border: solid var(--accent-color);
 }
 
-.client-link > svg:focus,
-.client-link > svg:hover {
+.client-link:hover > svg,
+.client-link:focus > svg {
   fill: var(--accent-color);
 }
-/* 
-.client-link svg:focus,
-.client-link svg:hover {
-  fill: var(--accent-color);
-} */
-
-/* .client-icon:hover,
-.client-icon:focus {
-  fill: var(--accent-color);
-} */
 /* <<<<<<<<<<<<  end CLIENTS  >>>>>>>>>>>> */
 
 /* <<<<<<<<<<<<  FOOTER  >>>>>>>>>>>> */
