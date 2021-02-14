@@ -57,6 +57,28 @@ a {
   display: block;
 }
 
+.button {
+  color: var(--primary-wight-color);
+  background: var(--accent-color);
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.875;
+  letter-spacing: 0.06em;
+  padding: 10px 32px;
+  border: none;
+  cursor: pointer;
+
+  transition-property: background;
+  transition-duration: 250ms;
+  transition-timing-function: var(--transition);
+}
+
+.button:hover,
+.button:focus,
+.button:active {
+  background-color: rgba(33, 150, 243, 0.85);
+}
 /* <<<<<<<<<<<<  end COMPONENTS  >>>>>>>>>>>> */
 
 /* <<<<<<<<<<<<<<<<<<<<<<<< STUDIO  >>>>>>>>>>>>>>>>>>>>>>>> */
@@ -240,29 +262,6 @@ a {
   color: var(--primary-wight-color);
   max-width: 696px;
   margin: 0 auto 30px;
-}
-
-.hero-button {
-  color: var(--primary-wight-color);
-  background: var(--accent-color);
-  border-radius: 4px;
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 1.875;
-  letter-spacing: 0.06em;
-  padding: 10px 32px;
-  border: none;
-  cursor: pointer;
-
-  transition-property: background;
-  transition-duration: 250ms;
-  transition-timing-function: var(--transition);
-}
-
-.hero-button:hover,
-.hero-button:focus,
-.hero-button:active {
-  background-color: rgba(33, 150, 243, 0.85);
 }
 /* <<<<<<<<<<<< end HERO  >>>>>>>>>>>> */
 
@@ -586,7 +585,7 @@ a {
   margin-left: 70px;
 }
 
-.footer-socium b {
+.footer-section b {
   display: inline-block;
   margin-bottom: 20px;
   color: var(--primary-wight-color);
@@ -627,6 +626,19 @@ a {
 .footer-socium a:focus {
   background-color: var(--accent-color);
   fill: var(--primary-wight-color);
+}
+
+.footer-form {
+  margin-left: 93px;
+}
+
+.footer-mail {
+  width: 358px;
+  height: 50px;
+  background-color: var(--primary-icon-bgcolor);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  padding: 15px 16px;
 }
 /* <<<<<<<<<<<<  end FOOTER  >>>>>>>>>>>> */
 /* <<<<<<<<<<<<<<<<<<<<<<<< end STUDIO  >>>>>>>>>>>>>>>>>>>>>>>> */
