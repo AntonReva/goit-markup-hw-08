@@ -790,7 +790,7 @@ a {
   padding: 63px 24px;
   background-color: rgba(33, 150, 243, 0.9);
 
-  transform: translateY(100%);
+  transform: translateY(101%);
 
   transition-property: transform;
   transition-duration: 250ms;
