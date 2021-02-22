@@ -1,0 +1,7 @@
+.nav-link.active-link {
+  color: var(--accent-color);
+}
+
+.active-link::after {
+  transform: scale(1);
+}

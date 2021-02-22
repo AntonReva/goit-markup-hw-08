@@ -1,0 +1,48 @@
+.work-box {
+  padding-bottom: 94px;
+}
+
+.work-title {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 1.167;
+  letter-spacing: 0.03em;
+  color: var(--primary-text-color);
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.work-list {
+  display: flex;
+
+  & li + li {
+    margin-left: 30px;
+  }
+}
+
+.work-overlay-box {
+  position: relative;
+}
+
+.work-overlay {
+  position: absolute;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 370px;
+  height: 70px;
+  left: 0;
+  bottom: 0;
+
+  background-color: rgba(47, 48, 58, 0.8);
+
+  & p {
+    font-size: 14px;
+    line-height: 1.143;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--primary-wight-color);
+  }
+}

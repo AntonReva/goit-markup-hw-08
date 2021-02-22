@@ -1,0 +1,25 @@
+.button {
+  color: var(--primary-wight-color);
+  background: var(--accent-color);
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.875;
+  letter-spacing: 0.06em;
+  padding: 10px auto;
+  border: none;
+  cursor: pointer;
+  width: 200px;
+  height: 50px;
+
+  transition-property: background;
+  transition-duration: 250ms;
+  transition-timing-function: var(--transition);
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: var(--primary-background-btm-color);
+    outline: none;
+  }
+}
