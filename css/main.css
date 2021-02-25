@@ -42,9 +42,6 @@ ul,
 ol {
   margin: 0;
   padding: 0;
-}
-
-ul {
   list-style: none;
 }
 
@@ -86,14 +83,6 @@ a {
 .button:hover, .button:focus, .button:active {
   background-color: var(--primary-background-btm-color);
   outline: none;
-}
-
-.nav-link.active-link {
-  color: var(--accent-color);
-}
-
-.active-link::after {
-  transform: scale(1);
 }
 
 .header-box {
@@ -153,13 +142,11 @@ a {
   bottom: 0;
   border-radius: 2px;
   background-color: var(--accent-color);
-  /* opacity: 0; */
   transform: scale(0);
   transition: transform 250ms var(--transition);
 }
 
 .nav-link:focus::after, .nav-link:hover::after {
-  /* opacity: 1; */
   transform: scale(1);
 }
 
@@ -199,7 +186,6 @@ a {
   line-height: 1.143;
   letter-spacing: 0.02em;
   color: var(--title-text-color);
-  display: flex;
   padding-top: 32px;
   padding-bottom: 32px;
   align-items: center;
@@ -215,6 +201,14 @@ a {
 .address-icon {
   margin-right: 10px;
   fill: currentColor;
+}
+
+.active-link::after {
+  transform: scale(1);
+}
+
+.nav-link .active-link {
+  color: var(--accent-color);
 }
 
 .hero-section {
@@ -234,7 +228,7 @@ a {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) scale(0);
+  transform: translate(-50%, -50%) scale(0.8);
   transition: transform 250ms var(--transition);
 }
 
