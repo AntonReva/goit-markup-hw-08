@@ -529,22 +529,18 @@ a {
 }
 
 .team-box {
-  padding: 94px 0;
-  background-color: var(--primary-bgc);
+  padding: 60px 0;
+  background-color: #f5f4fa;
 }
 
 .team-title {
-  font-weight: bold;
-  font-size: 36px;
-  line-height: 1.167;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.179;
   letter-spacing: 0.03em;
   color: var(--primary-text-color);
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   text-align: center;
-}
-
-.team-list {
-  display: flex;
 }
 
 .team-list > li {
@@ -552,31 +548,28 @@ a {
   border-radius: 0px 0px 4px 4px;
 }
 
-.team-list li + li {
-  margin-left: 30px;
-}
-
 .team-name {
-  font-weight: 500;
   font-size: 16px;
+  font-weight: 500;
   line-height: 1.188;
   letter-spacing: 0.03em;
-  color: var(--primary-text-color);
+  color: #212121;
   margin-bottom: 10px;
 }
 
 .team-text {
-  font-weight: normal;
   font-size: 16px;
+  font-weight: 400;
   line-height: 1.188;
   letter-spacing: 0.03em;
-  color: var(--title-text-color);
+  color: #757575;
 }
 
 .team-card {
   text-align: center;
-  padding: 30px 32px;
-  background-color: var(--primary-wight-color);
+  padding-top: 30px;
+  padding-bottom: 24px;
+  background-color: #ffffff;
   border-radius: 0px 0px 4px 4px;
 }
 
@@ -604,16 +597,67 @@ a {
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  fill: var(--primary-icon-color);
+  fill: #afb1b8;
   transition-property: fill, background-color;
   transition-duration: 250ms;
-  transition-timing-function: var(--transition);
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .team-social a:hover,
 .team-social a:focus {
-  background-color: var(--accent-color);
-  fill: var(--primary-wight-color);
+  background-color: #2196f3;
+  fill: #ffffff;
+}
+
+@media screen and (max-width: 767px) {
+  .team-list {
+    display: flex;
+    flex-direction: column;
+  }
+  .team-list-box:nth-child(n + 2) {
+    margin-top: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .team-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .team-list-box {
+    max-width: 354px;
+  }
+  .team-list-box:nth-child(2n + 1) {
+    margin-right: 30px;
+  }
+  .team-list-box:nth-child(n + 3) {
+    margin-top: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .team-box {
+    padding: 94px 0;
+  }
+  .team-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .team-list-box {
+    max-width: 270px;
+  }
+  .team-title {
+    margin-bottom: 50px;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.167;
+  }
+  .team-card {
+    padding: 30px 32px;
+  }
 }
 
 .client-box {
