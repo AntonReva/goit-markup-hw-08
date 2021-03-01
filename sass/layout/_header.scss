@@ -29,17 +29,17 @@
   .mobile-menu {
     position: absolute;
     width: 100%;
-    max-width: 480px;
+    max-width: 100vw;
     height: 100vh;
     top: 0;
-    left: 50%;
-    transform: translateX(-50%) translateY(-100%);
+    left: 0;
+    transform: translateY(-1000%);
     background-color: #fff777;
     padding: 48px 40px;
     transition: transform 500ms linear;
 
     &.is-open {
-      transform: translateX(-50%) translateY(0%);
+      transform: translateY(0%);
     }
   }
 
@@ -188,20 +188,14 @@
     &:focus {
       color: var(--accent-color);
     }
-
-  .address-list {
-    display: flex;
-
-    & li:not(:last-child) {
-      margin-right: 50px;
-    }
   }
 
   .address-link {
+    display: flex;
     @include font(12px, 500, 14px);
     color: var(--title-text-color);
-    padding-top: 32px;
-    padding-bottom: 32px;
+    padding-top: 5px;
+    padding-bottom: 5px;
     align-items: center;
 
     transition-property: color;
@@ -219,6 +213,7 @@
     margin-right: 10px;
     fill: currentColor;
   }
+
   .active-link::after {
     transform: scale(1);
   }
@@ -228,11 +223,25 @@
   }
 }
 
-
 @media screen and (min-width: 1200px) {
   .header-logo {
     padding-top: 24px;
     padding-bottom: 25px;
     margin-right: 93px;
+  }
+
+  .address-list {
+    display: flex;
+
+    & li:not(:last-child) {
+      margin-right: 50px;
+    }
+  }
+  .address-link {
+    @include font(12px, 500, 14px);
+    color: var(--title-text-color);
+    padding-top: 32px;
+    padding-bottom: 32px;
+    // align-items: center;
   }
 }

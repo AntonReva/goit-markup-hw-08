@@ -2,8 +2,7 @@
   position: relative;
   background-color: var(--primary-icon-background-color);
   text-align: center;
-  padding: 200px 0;
-  height: 600px;
+  height: 400px;
   max-width: 1600px;
   margin: 0 auto;
   background-image: linear-gradient(
@@ -21,7 +20,7 @@
     top: 50%;
     left: 50%;
 
-    transform: translate(-50%, -50%) scale(0.8);
+    transform: translate(-50%, -50%) scale(1);
     transition: transform 250ms var(--transition);
   }
 
@@ -31,12 +30,23 @@
 }
 
 .hero-title {
-  font-weight: 900;
-  font-size: 44px;
-  line-height: 1.364;
-  letter-spacing: 0.06em;
+  @include font(26px, 900, 42px);
   text-transform: uppercase;
-  color: var(--primary-wight-color);
-  max-width: 696px;
+  color: $primary-wight-color;
+  max-width: 360px;
   margin: 0 auto 30px;
+}
+
+// @media screen and (min-width: 768px) {
+// }
+
+@media screen and (min-width: 1200px) {
+  .hero-title {
+    @include font(44px, 900, 60px);
+    max-width: 696px;
+  }
+
+  .hero-section {
+    height: 600px;
+  }
 }
