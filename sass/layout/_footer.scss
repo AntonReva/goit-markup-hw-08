@@ -1,27 +1,24 @@
 .footer-box {
   display: flex;
-  align-items: baseline;
+  justify-content: center;
+  align-items: center;
 }
 
 .footer-logo {
-  font-family: Raleway;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 26px;
-  line-height: 1.192;
+  @include font(24px, 700, 28px);
   letter-spacing: 0.03em;
-  color: var(--primary-wight-color);
+  color: $primary-wight-color;
   margin-bottom: 20px;
 }
 
 .footer-section {
-  background-color: var(--primary-icon-background-color);
+  background-color: $primary-icon-background-color;
   padding: 60px 0;
 
   & b {
     display: inline-block;
     margin-bottom: 20px;
-    color: var(--primary-wight-color);
+    color: $primary-wight-color;
   }
 }
 
@@ -32,7 +29,7 @@
   font-size: 14px;
   line-height: 1.714;
   letter-spacing: 0.03em;
-  color: var(--primary-wight-color);
+  color: $primary-wight-color;
   margin-bottom: 9px;
 }
 
@@ -45,11 +42,11 @@
 
   transition-property: color;
   transition-duration: 250ms;
-  transition-timing-function: var(--transition);
+  transition-timing-function: $transition;
 
   &:hover,
   &:focus {
-    color: var(--accent-color);
+    color: $accent-color;
   }
 }
 
@@ -58,8 +55,6 @@
 }
 
 .footer-social {
-  margin-left: 70px;
-
   & ul {
     display: flex;
     justify-content: center;
@@ -83,26 +78,18 @@
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    fill: var(--primary-wight-color);
+    fill: $primary-wight-color;
     background-color: rgba(255, 255, 255, 0.1);
 
     transition-property: background-color;
     transition-duration: 250ms;
-    transition-timing-function: var(--transition);
+    transition-timing-function: $transition;
   }
 
   & a:hover,
   & a:focus {
-    background-color: var(--accent-color);
-    fill: var(--primary-wight-color);
-  }
-}
-
-.footer-form {
-  margin-left: auto;
-
-  & form {
-    display: flex;
+    background-color: $accent-color;
+    fill: $primary-wight-color;
   }
 }
 
@@ -118,11 +105,11 @@
 
   transition-property: border-color;
   transition-duration: 250ms;
-  transition-timing-function: var(--transition);
+  transition-timing-function: $transition;
 
   &:focus {
     outline: none;
-    border-color: var(--accent-color);
+    border-color: $accent-color;
   }
 }
 
@@ -135,4 +122,116 @@
   background-size: contain;
   vertical-align: middle;
   margin-left: 10px;
+}
+
+@media screen and (max-width: 767px) {
+  .footer-box-contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 60px;
+
+    & ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  .footer-social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 60px;
+  }
+
+  .footer-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-box {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
+  .footer-mail {
+    margin-bottom: 20px;
+    width: 450px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .footer-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .footer-box-contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  .footer-social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 60px;
+
+    & form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  .footer-mail {
+    width: 450px;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-box {
+    display: flex;
+    align-items: baseline;
+  }
+
+  .footer-social {
+    margin-left: 70px;
+  }
+
+  .footer-form {
+    margin-left: auto;
+
+    & form {
+      display: flex;
+    }
+  }
+
+  .footer-logo {
+    @include font(26px, 700, 31px);
+  }
 }

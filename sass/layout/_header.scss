@@ -37,6 +37,7 @@
     background-color: #fff777;
     padding: 48px 40px;
     transition: transform 500ms linear;
+    z-index: 1;
 
     &.is-open {
       transform: translateY(0%);
