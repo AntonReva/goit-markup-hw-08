@@ -1,30 +1,17 @@
 .priority-box {
-  padding: 94px 0;
+  padding: 60px 0;
 }
 
-.priority-list {
-  display: flex;
-  justify-content: center;
-
-  & li {
-    width: 270px;
-  }
-
-  & li + li {
-    margin-left: 30px;
-  }
-
-  & li::before {
-    display: block;
-    content: "";
-    height: 120px;
-    margin-bottom: 30px;
-    border-radius: 4px;
-    background-color: var(--primary-bgc);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 70px;
-  }
+.priority-list li::before {
+  display: block;
+  content: "";
+  height: 120px;
+  margin-bottom: 30px;
+  border-radius: 4px;
+  background-color: $primary-bgc;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 70px;
 }
 
 .antenna-item::before {
@@ -44,20 +31,63 @@
 }
 
 .priority-subtitle {
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 1.143;
+  @include font(14px, 700, 16px);
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: var(--primary-text-color);
+  color: $primary-text-color;
   margin-bottom: 10px;
+  text-align: center;
 }
 
 .priority-text {
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 1.714;
+  @include font(14px, 400, 24px);
   letter-spacing: 0.03em;
-  color: var(--title-text-color);
+  color: $primary-text-color;
+}
+
+@media screen and (max-width: 767px) {
+  .priority-list li + li {
+    margin-top: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .priority-list {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    & li {
+      width: 354px;
+    }
+    & li:nth-child(2n + 1) {
+      margin-right: 30px;
+    }
+    & li:nth-child(n + 3) {
+      margin-top: 30px;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .priority-list {
+    display: flex;
+  }
+
+  .priority-subtitle {
+    text-align: left;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .priority-box {
+    padding: 94px 0;
+  }
+
+  .priority-list {
+    & li {
+      width: 270px;
+    }
+    & li + li {
+      margin-left: 30px;
+    }
+  }
 }

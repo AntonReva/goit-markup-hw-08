@@ -49,6 +49,8 @@ ol {
 
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 a {
@@ -336,10 +338,9 @@ a {
 
 .hero-section {
   position: relative;
-  background-color: var(--primary-icon-background-color);
+  background-color: #2f303a;
   text-align: center;
   height: 400px;
-  max-width: 1600px;
   margin: 0 auto;
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/hero/hero.jpg);
   background-repeat: no-repeat;
@@ -351,7 +352,7 @@ a {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
-  transition: transform 250ms var(--transition);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-section:hover div {
@@ -377,24 +378,12 @@ a {
   }
   .hero-section {
     height: 600px;
+    max-width: 1600px;
   }
 }
 
 .priority-box {
-  padding: 94px 0;
-}
-
-.priority-list {
-  display: flex;
-  justify-content: center;
-}
-
-.priority-list li {
-  width: 270px;
-}
-
-.priority-list li + li {
-  margin-left: 30px;
+  padding: 60px 0;
 }
 
 .priority-list li::before {
@@ -403,7 +392,7 @@ a {
   height: 120px;
   margin-bottom: 30px;
   border-radius: 4px;
-  background-color: var(--primary-bgc);
+  background-color: #f5f4fa;
   background-repeat: no-repeat;
   background-position: center;
   background-size: 70px;
@@ -426,22 +415,65 @@ a {
 }
 
 .priority-subtitle {
-  font-weight: bold;
   font-size: 14px;
+  font-weight: 700;
   line-height: 1.143;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: var(--primary-text-color);
+  color: #212121;
   margin-bottom: 10px;
+  text-align: center;
 }
 
 .priority-text {
-  font-style: normal;
-  font-weight: normal;
   font-size: 14px;
+  font-weight: 400;
   line-height: 1.714;
   letter-spacing: 0.03em;
-  color: var(--title-text-color);
+  color: #212121;
+}
+
+@media screen and (max-width: 767px) {
+  .priority-list li + li {
+    margin-top: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .priority-list {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+  .priority-list li {
+    width: 354px;
+  }
+  .priority-list li:nth-child(2n + 1) {
+    margin-right: 30px;
+  }
+  .priority-list li:nth-child(n + 3) {
+    margin-top: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .priority-list {
+    display: flex;
+  }
+  .priority-subtitle {
+    text-align: left;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .priority-box {
+    padding: 94px 0;
+  }
+  .priority-list li {
+    width: 270px;
+  }
+  .priority-list li + li {
+    margin-left: 30px;
+  }
 }
 
 .work-box {
@@ -896,8 +928,11 @@ a {
 
 .modal {
   position: absolute;
-  width: 450px;
-  height: 609px;
+  width: 100%;
+  max-width: 450px;
+  height: 95%;
+  max-height: 609px;
+  overflow: scroll;
   top: 50%;
   left: 50%;
   opacity: 0;
@@ -1075,6 +1110,8 @@ a {
 
 @media screen and (min-width: 1200px) {
   .modal {
+    max-width: none;
+    max-height: none;
     width: 528px;
     height: 581px;
   }
