@@ -1,4 +1,6 @@
 :root {
+  --text-font: "Roboto", sans-serif;
+  --title-font: "Raleway", sans-serif;
   --primary-text-color: #212121;
   --title-text-color: #757575;
   --accent-color: #2196f3;
@@ -10,3 +12,16 @@
   --transition: cubic-bezier(0.4, 0, 0.2, 1);
   --primary-background-btm-color: #188ce8;
 }
+
+$primary-text-color: #212121;
+$accent-color: #2196f3;
+$title-text-color: #757575;
+$primary-wight-color: #ffffff;
+$primary-black-color: #000000;
+$primary-bgc: #f5f4fa;
+$primary-icon-color: #afb1b8;
+$primary-icon-background-color: #2f303a;
+$primary-background-btm-color: #188ce8;
+$transition: cubic-bezier(0.4, 0, 0.2, 1);
+$text-font: "Roboto", sans-serif;
+$title-font: "Raleway", sans-serif;
