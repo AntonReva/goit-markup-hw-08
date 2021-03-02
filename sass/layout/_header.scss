@@ -2,22 +2,7 @@
   border-bottom: 1px solid #ececec;
 }
 
-.first-word {
-  @include font(24px, 700, 28px);
-  color: $accent-color;
-}
-
-.header-logo {
-  @include font(24px, 700, 28px);
-  color: $primary-text-color;
-}
-
 @media screen and (max-width: 767px) {
-  .header-logo {
-    padding-top: 16px;
-    padding-bottom: 16px;
-  }
-
   .nav-list {
     display: none;
   }
@@ -132,12 +117,6 @@
     justify-content: center;
   }
 
-  .header-logo {
-    padding-top: 26px;
-    padding-bottom: 26px;
-    margin-right: 88px;
-  }
-
   .header-box {
     display: flex;
     align-items: center;
@@ -174,10 +153,10 @@
       left: 0;
       bottom: 0;
       border-radius: 2px;
-      background-color: var(--accent-color);
+      background-color: $accent-color;
 
       transform: scale(0);
-      transition: transform 250ms var(--transition);
+      transition: transform 250ms $transition;
     }
 
     &:focus::after,
@@ -187,26 +166,26 @@
 
     &:hover,
     &:focus {
-      color: var(--accent-color);
+      color: $accent-color;
     }
   }
 
   .address-link {
     display: flex;
     @include font(12px, 500, 14px);
-    color: var(--title-text-color);
+    color: $title-text-color;
     padding-top: 5px;
     padding-bottom: 5px;
     align-items: center;
 
     transition-property: color;
     transition-duration: 250ms;
-    transition-timing-function: var(--transition);
+    transition-timing-function: $transition;
 
     &:active,
     &:hover,
     &:focus {
-      color: var(--accent-color);
+      color: $accent-color;
     }
   }
 
@@ -220,17 +199,11 @@
   }
 
   .nav-link .active-link {
-    color: var(--accent-color);
+    color: $accent-color;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .header-logo {
-    padding-top: 24px;
-    padding-bottom: 25px;
-    margin-right: 93px;
-  }
-
   .address-list {
     display: flex;
 
@@ -238,11 +211,11 @@
       margin-right: 50px;
     }
   }
+
   .address-link {
-    @include font(12px, 500, 14px);
+    @include font(14px, 500, 16px);
     color: var(--title-text-color);
     padding-top: 32px;
     padding-bottom: 32px;
-    // align-items: center;
   }
 }

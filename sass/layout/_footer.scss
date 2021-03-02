@@ -4,13 +4,6 @@
   align-items: center;
 }
 
-.footer-logo {
-  @include font(24px, 700, 28px);
-  letter-spacing: 0.03em;
-  color: $primary-wight-color;
-  margin-bottom: 20px;
-}
-
 .footer-section {
   background-color: $primary-icon-background-color;
   padding: 60px 0;
@@ -229,9 +222,5 @@
     & form {
       display: flex;
     }
-  }
-
-  .footer-logo {
-    @include font(26px, 700, 31px);
   }
 }
