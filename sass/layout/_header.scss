@@ -72,10 +72,6 @@
     margin-top: 32px;
   }
 
-  .mobile-menu-address-tel {
-    margin-top: 30px;
-  }
-
   .mobile-menu-address-mail {
     margin-top: 32px;
   }
@@ -83,6 +79,7 @@
   .mobile-menu-address-tel {
     @include font(34px, 500, 40px);
     color: $accent-color;
+    margin-top: 300px;
   }
 
   .mobile-menu-address-mail {
@@ -96,8 +93,10 @@
     display: flex;
     margin-top: 64px;
 
-    & li + LI {
-      margin-left: 20px;
+    & li + li {
+      margin-left: 10px;
+      padding-left: 10px;
+      border-left: 1px solid #c4c4c4;
     }
   }
 }
