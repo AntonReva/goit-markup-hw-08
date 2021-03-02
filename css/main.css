@@ -1035,6 +1035,11 @@ a {
 .portfolio-list {
   display: flex;
   flex-wrap: wrap;
+  margin: -15px;
+}
+
+.portfolio-list li {
+  margin: 15px;
 }
 
 .portfolio-list a {
@@ -1132,12 +1137,6 @@ a {
   }
   .btm-list {
     margin-bottom: 50px;
-  }
-  .portfolio-list li:not(:nth-child(3n + 3)) {
-    margin-right: 30px;
-  }
-  .portfolio-list li:not(:nth-last-child(-n + 3)) {
-    margin-bottom: 30px;
   }
 }
 
