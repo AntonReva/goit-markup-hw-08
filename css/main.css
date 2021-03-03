@@ -189,17 +189,18 @@ a {
     display: none;
   }
   .mobile-menu {
-    position: absolute;
+    position: fixed;
+    overflow: auto;
     width: 100%;
-    max-width: 100vw;
-    height: 100vh;
+    height: 100%;
     top: 0;
     left: 0;
-    transform: translateY(-1000%);
+    transform: translateY(-100%);
     background-color: #fff;
     padding: 48px 40px;
     transition: transform 500ms linear;
     z-index: 1;
+    overflow: none;
   }
   .mobile-menu.is-open {
     transform: translateY(0%);
@@ -258,6 +259,8 @@ a {
     color: #757575;
   }
   .header-social-list {
+    display: flex;
+    flex-wrap: wrap;
     font-size: 18px;
     font-weight: 500;
     line-height: 1.222;
@@ -713,6 +716,7 @@ a {
 .client-list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   margin: -15px;
 }
 
@@ -783,10 +787,11 @@ a {
   padding: 60px 0;
 }
 
-.footer-section b {
+.footer-section p {
   display: inline-block;
   margin-bottom: 20px;
   color: #ffffff;
+  text-transform: uppercase;
 }
 
 .footer-link-map {
@@ -1093,11 +1098,11 @@ a {
   .btm-list li:nth-child(-n + 3) {
     margin-bottom: 15px;
   }
-  .portfolio-overlay-box img {
-    max-width: 450px;
+  .portfolio-list {
+    justify-content: center;
   }
-  .portfolio-link {
-    margin-top: 30px;
+  .portfolio-list li {
+    width: 450px;
   }
 }
 
@@ -1147,7 +1152,8 @@ a {
   top: 50%;
   left: 50%;
   opacity: 0;
-  transform: translate(-50%, -50%) scale(1);
+  overflow: auto;
+  transform: translate(-50%, -50%) scale(2);
   background-color: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
@@ -1286,8 +1292,9 @@ a {
 
 .checkbox-label a {
   display: inline;
-  font-size: 14px;
-  line-height: 1.714;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.167;
   letter-spacing: 0.03em;
   text-decoration-line: underline;
   color: #2196f3;
