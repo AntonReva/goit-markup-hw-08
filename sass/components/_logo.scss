@@ -14,7 +14,6 @@
   letter-spacing: 0.03em;
   color: $primary-wight-color;
   margin-bottom: 20px;
-  text-align: center;
 }
 
 @media screen and (max-width: 767px) {
@@ -44,6 +43,12 @@
     padding-top: 26px;
     padding-bottom: 26px;
     margin-right: 88px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .footer-logo {
+    text-align: center;
   }
 }
 

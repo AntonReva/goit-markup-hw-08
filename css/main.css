@@ -129,7 +129,6 @@ a {
   letter-spacing: 0.03em;
   color: #ffffff;
   margin-bottom: 20px;
-  text-align: center;
 }
 
 @media screen and (max-width: 767px) {
@@ -163,6 +162,12 @@ a {
     padding-top: 26px;
     padding-bottom: 26px;
     margin-right: 88px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .footer-logo {
+    text-align: center;
   }
 }
 
@@ -820,7 +825,6 @@ a {
   font-size: 14px;
   font-weight: 700;
   line-height: 1.143;
-  text-align: center;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #ffffff;
@@ -833,7 +837,6 @@ a {
   line-height: 1.714;
   letter-spacing: 0.03em;
   color: #ffffff;
-  text-align: center;
   transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -849,7 +852,6 @@ a {
   line-height: 1.714;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
-  text-align: center;
   transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -859,16 +861,8 @@ a {
   color: #2196f3;
 }
 
-.footer-box-contacts {
-  margin-bottom: 60px;
-}
-
 .footer-box-contacts li + li {
   margin-top: 8px;
-}
-
-.footer-social {
-  margin-bottom: 60px;
 }
 
 .footer-social ul {
@@ -907,7 +901,6 @@ a {
 }
 
 .footer-mail {
-  width: 100%;
   height: 50px;
   font-size: 16px;
   font-weight: 400;
@@ -917,7 +910,6 @@ a {
   border-radius: 4px;
   padding: 15px 16px;
   color: #ffffff;
-  margin-bottom: 20px;
   transition-property: border-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -926,11 +918,6 @@ a {
 .footer-mail:focus {
   outline: none;
   border-color: #2196f3;
-}
-
-.footer-button {
-  display: block;
-  margin: 0 auto;
 }
 
 .footer-btm-icon::after {
@@ -942,6 +929,83 @@ a {
   background-size: cover;
   vertical-align: middle;
   margin-left: 10px;
+}
+
+@media screen and (max-width: 767px) {
+  .footer-social {
+    margin-bottom: 60px;
+  }
+  .footer-link-map {
+    text-align: center;
+  }
+  .footer-mail {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .footer-section p {
+    text-align: center;
+  }
+  .footer-box-contacts {
+    margin-bottom: 60px;
+  }
+  .footer-link {
+    text-align: center;
+  }
+  .footer-button {
+    display: block;
+    margin: 0 auto;
+  }
+  .footer-mail {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer-box {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+  }
+  .footer-social {
+    margin-right: auto;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .footer-box-contacts {
+    margin-right: 165px;
+    margin-left: auto;
+  }
+  .footer-mail {
+    width: 450px;
+  }
+  .footer-form {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-box-contacts {
+    margin-right: 70px;
+  }
+  .footer-form {
+    justify-content: baseline;
+  }
+  .footer-form form {
+    display: flex;
+  }
+  .footer-mail {
+    display: inline-block;
+    width: 358px;
+    margin-right: 15px;
+  }
+  .footer-button {
+    display: inline-block;
+  }
 }
 
 .portfolio-box {
@@ -1113,7 +1177,6 @@ a {
   top: 50%;
   left: 50%;
   opacity: 0;
-  overflow: auto;
   transform: translate(-50%, -50%) scale(2);
   background-color: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
