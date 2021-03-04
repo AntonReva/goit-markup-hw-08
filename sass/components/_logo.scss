@@ -3,13 +3,18 @@
   font-family: raleway;
 }
 
+.header-logo {
+  font-family: raleway;
+  letter-spacing: 0.03em;
+  color: $primary-text-color;
+}
+
 .footer-logo {
+  font-family: raleway;
   letter-spacing: 0.03em;
   color: $primary-wight-color;
   margin-bottom: 20px;
-}
-.header-logo {
-  color: $primary-text-color;
+  text-align: center;
 }
 
 @media screen and (max-width: 767px) {

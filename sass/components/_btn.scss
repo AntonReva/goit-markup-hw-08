@@ -1,10 +1,8 @@
 .button {
-  color: var(--primary-wight-color);
-  background: var(--accent-color);
+  color: $primary-wight-color;
+  background: $accent-color;
   border-radius: 4px;
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 1.875;
+  @include font(16px, 700, 30px);
   letter-spacing: 0.06em;
   padding: 10px auto;
   border: none;
@@ -14,12 +12,12 @@
 
   transition-property: background;
   transition-duration: 250ms;
-  transition-timing-function: var(--transition);
+  transition-timing-function: $transition;
 
   &:hover,
   &:focus,
   &:active {
-    background-color: var(--primary-background-btm-color);
+    background-color: $primary-background-btm-color;
     outline: none;
   }
 }
