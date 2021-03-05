@@ -1,16 +1,16 @@
 .first-word {
   color: $accent-color;
-  font-family: raleway;
+  font-family: $title-font;
 }
 
 .header-logo {
-  font-family: raleway;
+  font-family: $title-font;
   letter-spacing: 0.03em;
   color: $primary-text-color;
 }
 
 .footer-logo {
-  font-family: raleway;
+  font-family: $title-font;
   letter-spacing: 0.03em;
   color: $primary-wight-color;
   margin-bottom: 20px;

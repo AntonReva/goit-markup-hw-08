@@ -115,17 +115,17 @@ a {
 
 .first-word {
   color: #2196f3;
-  font-family: raleway;
+  font-family: "Raleway", sans-serif;
 }
 
 .header-logo {
-  font-family: raleway;
+  font-family: "Raleway", sans-serif;
   letter-spacing: 0.03em;
   color: #212121;
 }
 
 .footer-logo {
-  font-family: raleway;
+  font-family: "Raleway", sans-serif;
   letter-spacing: 0.03em;
   color: #ffffff;
   margin-bottom: 20px;
@@ -240,6 +240,11 @@ a {
     height: 40px;
     fill: #212121;
   }
+  .mobile-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
   .mobile-menu-nav-link {
     font-size: 40px;
     font-weight: 500;
@@ -260,7 +265,6 @@ a {
     font-weight: 500;
     line-height: 1.176;
     color: #2196f3;
-    margin-top: 300px;
   }
   .mobile-menu-address-mail {
     font-size: 24px;
@@ -275,7 +279,6 @@ a {
     font-weight: 500;
     line-height: 1.222;
     color: #2196f3;
-    display: flex;
     margin-top: 64px;
   }
   .header-social-list li + li {

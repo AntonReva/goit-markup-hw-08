@@ -59,6 +59,11 @@
     height: 40px;
     fill: #212121;
   }
+  .mobile-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
 
   .mobile-menu-nav-link {
     @include font(40px, 500, 47px);
@@ -80,7 +85,7 @@
   .mobile-menu-address-tel {
     @include font(34px, 500, 40px);
     color: $accent-color;
-    margin-top: 300px;
+    // margin-top: 300px;
   }
 
   .mobile-menu-address-mail {
@@ -93,7 +98,6 @@
     flex-wrap: wrap;
     @include font(18px, 500, 22px);
     color: $accent-color;
-    display: flex;
     margin-top: 64px;
 
     & li + li {
